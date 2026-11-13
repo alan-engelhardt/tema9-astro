@@ -1,14 +1,14 @@
 ---
-const { produkt } = Astro.props;
+const { event } = Astro.props;
 ---
 
 <article>
     <img
-        src=`https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp`
+        src=`https://kea-alt-del.dk/t7/images/webp/640/${event.id}.webp`
         alt="produktbillede"
     />
-    <h2>{produkt.productdisplayname}</h2>
-    <p>{produkt.price},- kr.</p>
+    <h2>{event.titel}</h2>
+    <p>{event.beskrivelse},- kr.</p>
 </article>
 
 <style>
