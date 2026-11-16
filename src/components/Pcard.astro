@@ -9,7 +9,7 @@ const { event } = Astro.props;
     />
     <h2>{event.titel}</h2>
     <p>{event.beskrivelse}</p>
-    {event.billeder[1] &&     <img
+    {event.billeder[1] && <img
         src=`https://flxrgxrvxeximsskwubc.supabase.co/storage/v1/object/public/events/${event.id}/${event.billeder[1]}.jpg`
         alt="eventbillede"
     />}
@@ -22,7 +22,7 @@ const { event } = Astro.props;
         color: inherit;
     }
     article {
-        background-color: wheat;
+        background-color: #eee;
     }
     img {
         width: 100%;
