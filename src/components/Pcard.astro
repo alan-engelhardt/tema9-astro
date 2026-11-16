@@ -1,23 +1,31 @@
 ---
 const { event } = Astro.props;
 ---
-
+<a href=`events/${event.id}`>
 <article>
     <img
-        src=`https://kea-alt-del.dk/t7/images/webp/640/${event.id}.webp`
-        alt="produktbillede"
+        src=`https://flxrgxrvxeximsskwubc.supabase.co/storage/v1/object/public/events/${event.id}/primary.jpg`
+        alt="eventbillede"
     />
     <h2>{event.titel}</h2>
-    <p>{event.beskrivelse},- kr.</p>
+    <p>{event.beskrivelse}</p>
+    {event.billeder[1] &&     <img
+        src=`https://flxrgxrvxeximsskwubc.supabase.co/storage/v1/object/public/events/${event.id}/${event.billeder[1]}.jpg`
+        alt="eventbillede"
+    />}
 </article>
+</a>
 
 <style>
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
     article {
-        padding: 1rem;
-        border: 1px solid;
         background-color: wheat;
     }
     img {
-        max-width: 100%;
+        width: 100%;
+        aspect-ratio: 3/2.1;
     }
 </style>
