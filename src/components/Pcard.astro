@@ -1,6 +1,7 @@
 ---
 const { event } = Astro.props;
 ---
+<a href=`../details/${event.id}`>
 <article>
     <img
         src=`https://flxrgxrvxeximsskwubc.supabase.co/storage/v1/object/public/events/${event.id}/primary.jpg`
@@ -13,6 +14,7 @@ const { event } = Astro.props;
         alt="eventbillede"
     />}
 </article>
+</a>
 
 <style>
     a{
